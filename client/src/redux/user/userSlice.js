@@ -9,37 +9,59 @@ const initialState = {
 const userSlice = createSlice({
     name: 'user',
     initialState,
-    reducers:{
-        signInStart: (state) =>{
+    reducers: {
+        signInStart: (state) => {
             state.loading = true;
             state.error = null;
         },
-        signInSuccess: (state,action) =>{
+        signInSuccess: (state, action) => {
             state.currentUser = action.payload;
             state.loading = false;
             state.error = null;
         },
-        signInfailure: (state,action) =>{
+        signInfailure: (state, action) => {
             state.loading = false;
             state.error = action.payload;
         },
-        updateStart: (state) =>{
+        updateStart: (state) => {
             state.loading = true;
             state.error = null;
         },
-        updateSuccess: (state,action) =>{
+        updateSuccess: (state, action) => {
             state.currentUser = action.payload;
             state.loading = false;
             state.error = null;
         },
-        updatefailure: (state,action) =>{
+        updatefailure: (state, action) => {
             state.loading = false;
             state.error = action.payload;
         },
-     
+        deleteUserStart: (state) => {
+            state.loading = true;
+            state.error = null;
+        },
+        deleteUserSuccess: (state, action) => {
+            state.currentUser = null;
+            state.loading = false;
+            state.error = null;
+        },
+        deleteUserfailure: (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
+        },
     },
 });
 
-export const { signInStart, signInSuccess, signInfailure, updateStart, updateSuccess, updatefailure} = userSlice.actions;
+export const { 
+    signInStart,
+    signInSuccess, 
+    signInfailure, 
+    updateStart, 
+    updateSuccess, 
+    updatefailure, 
+    deleteUserStart, 
+    deleteUserSuccess, 
+    deleteUserfailure 
+} = userSlice.actions;
 
 export default userSlice.reducer;
