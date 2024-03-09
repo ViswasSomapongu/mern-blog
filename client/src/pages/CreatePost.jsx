@@ -60,6 +60,7 @@ const CreatePost = () => {
         headers:{
           'Content-Type':'application/json',
         },
+      
         body:JSON.stringify(formData)
       })
       const data = await res.json();
@@ -91,7 +92,7 @@ const CreatePost = () => {
               setFormData({ ...formData, title: e.target.value })
             } />
           <Select
-            onChange={(e) => setFormData({ ...false, category: e.target.value })
+            onChange={(e) => setFormData({ ...formData, category: e.target.value })
             }
           >
             <option value="uncategorized">Select a category</option>

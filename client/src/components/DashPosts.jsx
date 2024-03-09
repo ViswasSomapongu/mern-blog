@@ -113,7 +113,7 @@ const DashPosts = () => {
                 className='font-medium text-red-500 hover:underline cursor-pointer'>Delete</span>
                 </Table.Cell>
                 <Table.Cell>
-                  <Link className='text-teal-500 hover:underline' to={`update-post/${post._id}`}>
+                  <Link className='text-teal-500 hover:underline' to={`/update-post/${post._id}`}>
                      <span>Edit</span>
                   </Link>
                 </Table.Cell>
