@@ -39,3 +39,22 @@ body {
 .dark .post-content a {
     color: red;
 }
+
+.post-content pre {
+    background-color: #1e293b;
+    border: 1px solid rgb(61, 69, 83);
+    color: #e8e7e7;
+    white-space: pre-wrap;
+    white-space-collapse: preserve;
+    text-wrap: wrap;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+code, kbd, samp, pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    font-size: 1em;
+}

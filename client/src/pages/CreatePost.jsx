@@ -7,6 +7,8 @@ import { app } from './../firebase';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { useNavigate } from 'react-router-dom';
+
+
 const CreatePost = () => {
 
   const [file, setFile] = useState(null);
@@ -126,7 +128,18 @@ const CreatePost = () => {
             <img src={formData.image} alt="upload" className='w-full h-72 object-cover' />
           )
         }
-        <ReactQuill theme='snow' placeholder='Write something...' className='h-72 mb-12' required onChange={(value) => setFormData({ ...formData, content: value })} />
+        <ReactQuill theme='snow' placeholder='Write something...' className='h-72 mb-12' required onChange={(value) => setFormData({ ...formData, content: value })} 
+        modules={{
+    toolbar: [
+      [{ header: [1, 2, 3, 4, false] }],
+  ['bold', 'italic', 'underline'],
+  ['code-block'],
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'align': [] }],
+  ['link', 'image'],
+    ]
+  }}
+        />
         <Button type='submit' gradientDuoTone='purpleToPink' size='sm' outline>Publish</Button>
         {
           publishError && (
