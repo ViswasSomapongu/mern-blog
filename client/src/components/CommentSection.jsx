@@ -1,7 +1,7 @@
 import { Alert, Button, TextInput, Textarea } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Link,useNavigate  } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Comment from './Comment';
 
 export default function CommentSection({ postId }) {
@@ -68,10 +68,10 @@ export default function CommentSection({ postId }) {
           comments.map((comment) =>
             comment._id === commentId
               ? {
-                  ...comment,
-                  likes: data.likes,
-                  numberOfLikes: data.likes.length,
-                }
+                ...comment,
+                likes: data.likes,
+                numberOfLikes: data.likes.length,
+              }
               : comment
           )
         );
@@ -80,6 +80,15 @@ export default function CommentSection({ postId }) {
       console.log(error.message);
     }
   };
+
+  const handleEdit = async (comment, editedContent) => {
+    setComments(
+      comments.map((c) =>
+        c._id === comment._id ? { ...c, content: editedContent } : c
+      )
+    );
+  };
+
   return (
     <div className='max-w-2xl mx-auto w-full p-3'>
       {currentUser ? (
@@ -132,7 +141,7 @@ export default function CommentSection({ postId }) {
           )}
         </form>
       )}
-       {comments.length === 0 ? (
+      {comments.length === 0 ? (
         <p className='text-sm my-5'>No comments yet!</p>
       ) : (
         <>
@@ -143,7 +152,7 @@ export default function CommentSection({ postId }) {
             </div>
           </div>
           {comments.map((comment) => (
-            <Comment key={comment._id} comment={comment} onLike={handleLike} />
+            <Comment key={comment._id} comment={comment} onLike={handleLike} onEdit={handleEdit} />
           ))}
         </>
       )}
