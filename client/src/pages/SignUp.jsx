@@ -53,7 +53,7 @@ const SignUp = () => {
             Blog
           </Link>
           <p className='text-sm mt-5'>
-            Write something here later about this page
+          Join our community of learners and enthusiasts to unlock a world of possibilities. Sign up now to access exclusive content and start building your skills.
           </p>
         </div>
         {/* Right */}

@@ -22,11 +22,11 @@ export default function FooterCom() {
               <Footer.Title title='About' />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href='https://www.google.com'
+                  href='#'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  100 JS Projects
+                  Portfolio
                 </Footer.Link>
                 <Footer.Link
                   href='/about'
@@ -38,16 +38,20 @@ export default function FooterCom() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title='Follow us' />
+              <Footer.Title title='Follow me' />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href='https://www.github.com'
+                  href='https://www.github.com/ViswasSomapongu'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Github
                 </Footer.Link>
-                <Footer.Link href='#'>Discord</Footer.Link>
+                <Footer.Link
+                    href='https://www.instagram.com/viswas_somapongu/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >Instagram</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -67,10 +71,9 @@ export default function FooterCom() {
             year={new Date().getFullYear()}
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-            <Footer.Icon href='#' icon={BsFacebook}/>
-            <Footer.Icon href='#' icon={BsInstagram}/>
+            <Footer.Icon href='https://www.instagram.com/viswas_somapongu/' icon={BsInstagram}/>
             <Footer.Icon href='#' icon={BsTwitter}/>
-            <Footer.Icon href='https://github.com' icon={BsGithub}/>
+            <Footer.Icon href='https://www.github.com/ViswasSomapongu' icon={BsGithub}/>
             <Footer.Icon href='#' icon={BsDribbble}/>
 
           </div>

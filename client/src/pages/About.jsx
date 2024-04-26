@@ -10,17 +10,13 @@ const About = () => {
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              Welcome to Viswas's Blog! This blog was created by Viswas Somapongu
-              as a personal project to share his thoughts and ideas with the
-              world. Viswas is a passionate developer who loves 
-              technology, coding, and everything in between.
+            Welcome to Viswas's Blog! This blog was developed as a personal project to test and showcase my skills in web development.
+            As a passionate developer, I'm constantly exploring new technologies and honing my coding abilities.
             </p>
 
             <p>
-              On this blog, you'll find weekly articles and tutorials on topics
-              such as web development, software engineering, and programming
-              languages. Viswas is always learning and exploring new
-              technologies, so be sure to check back often for new content!
+            Here, you'll discover a collection of articles, tutorials, and projects reflecting my journey in the world of technology.
+            From web development insights to software engineering concepts, this blog serves as a platform to share thoughts, ideas, and experiments with fellow enthusiasts like you.
             </p>
 
             <p>
