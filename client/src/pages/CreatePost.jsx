@@ -68,8 +68,7 @@ const CreatePost = () => {
       const data = await res.json();
 
       if(!res.ok){
-        setPublishError(data.message);
-        return;
+        setPublishError(data.message)
       }
       if(res.ok){
         setPublishError(null);

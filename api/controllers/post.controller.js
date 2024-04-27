@@ -6,9 +6,23 @@ export const create = async (req, res, next) =>{
     if(!req.user.isAdmin){
         return next(errorHandler(403,'You are not allowed to create a post'))
     }
-    if(!req.body.title || !req.body.content){
+    if(!req.body.title || !req.body.content ){
         return next(errorHandler(400,'Please provide all required fields'))
     }
+    if (req.body.title.trim() === '' || req.body.content.trim() === '') {
+      return next(errorHandler(400, 'Post title and content cannot be empty'));
+    }
+    if (req.body.title.trim().length === 0 || req.body.content.trim().length === 0) {
+      return next(errorHandler(400, 'Post title and content cannot be whitespace-only'));
+  }
+    try {
+      const existingPost = await Post.findOne({ title: req.body.title });
+      if (existingPost) {
+          return next(errorHandler(400, 'A post with this title already exists. Please use a different title.'));
+      }
+  } catch (error) {
+      return next(errorHandler(500, 'An error occurred. Please try again later.'));
+  }
     const slug = req.body.title.split(' ').join('-').toLowerCase().replace(/[^a-zA-Z0-9-]/g,'');
     const newPost = new Post({
         ...req.body,slug,userId:req.user.id
