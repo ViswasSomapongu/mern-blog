@@ -4,12 +4,14 @@ import { Link, useParams } from "react-router-dom"
 import CallToAction from "../components/CallToAction"
 import CommentSection from './../components/CommentSection';
 import PostCard from "../components/PostCard";
+import { useSelector } from "react-redux";
 const PostPage = () => {
     const {postSlug} = useParams()
     const [loading,setLoading] = useState(true)
     const [error,setError] = useState(false)
     const [post,setPost] = useState(null)
     const [recentPosts,setRecentPosts] = useState(null)
+    const { currentUser } = useSelector((state) => state.user);
    console.log(recentPosts)
     useEffect(()=>{
         const fetchPost = async () =>{
@@ -62,6 +64,9 @@ const PostPage = () => {
       <Link to={`/search/category=${post && post.category}`} className="self-center mt05">
       <Button color="gray" pill size='xs'>{post && post.category}</Button>
       </Link>
+      <Link to={`/update-post/${post._id}`} className="self-center mt05">
+      <Button className="my-2" color="gray" pill size='xs'>{currentUser.isAdmin && <h2>Edit this post</h2>}</Button>
+      </Link>  
       <img src={post && post.image} alt={post && post.title} className="mt-10 p-3 max-h-[600px] w-full object-cover"/>
      <div className="flex justify-between p-3 border-b border-slate-500 mx-auto w-full max-w-2xl text-xs">
         <span>{post && new Date(post.createdAt).toLocaleDateString()}</span>

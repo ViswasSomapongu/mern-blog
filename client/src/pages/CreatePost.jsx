@@ -127,17 +127,25 @@ const CreatePost = () => {
             <img src={formData.image} alt="upload" className='w-full h-72 object-cover' />
           )
         }
-        <ReactQuill theme='snow' placeholder='Write something...' className='h-72 mb-12' required onChange={(value) => setFormData({ ...formData, content: value })} 
+        <ReactQuill theme='snow' placeholder='Write something...' className='h-72 mb-12 dark:text-white' required onChange={(value) => setFormData({ ...formData, content: value })} 
         modules={{
-    toolbar: [
-      [{ header: [1, 2, 3, 4, false] }],
-  ['bold', 'italic', 'underline'],
-  ['code-block'],
-  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-  [{ 'align': [] }],
-  ['link', 'image'],
-    ]
-  }}
+          toolbar: [
+            [{ header: [1, 2, 3, 4, false] }],
+            ['bold', 'italic', 'underline'],
+            ['code-block'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'align': [] }],
+            ['link', 'image'],
+            [{ 'color': [] }, { 'background': [] }],
+            ['blockquote'],
+            ['clean'],
+            [{ 'indent': '-1'}, { 'indent': '+1' }], 
+            [{ 'script': 'sub'}, { 'script': 'super' }], 
+            ['strike'], 
+            [{ 'header': 1 }, { 'header': 2 }], 
+            ['video'] 
+          ]
+        }}
         />
         <Button type='submit' gradientDuoTone='purpleToPink' size='sm' outline>Publish</Button>
         {
