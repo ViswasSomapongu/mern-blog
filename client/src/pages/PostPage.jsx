@@ -63,7 +63,7 @@ const PostPage = () => {
     codeBlocks.forEach((block) => {
       block.classList.add("code-block");
       const button = document.createElement("button");
-      button.innerText = "Copy";
+      button.innerText = "Copy code";
       button.classList.add("copy-button");
       button.addEventListener("click", () => {
         navigator.clipboard
