@@ -1,6 +1,6 @@
 # Full Stack MERN Blog Project
 
-Welcome to the Full Stack MERN Blog Project! 😃 In this project, we've crafted a powerful and fully responsive MERN stack web application with cutting-edge features. Dive into our project and explore its capabilities!
+Welcome to the Full Stack MERN Blog Project! 😃 In this project, I've crafted a powerful and fully responsive MERN stack web application with cutting-edge features. Dive into our project and explore its capabilities!
 
 ## Features Highlights
 ## Features Highlights
