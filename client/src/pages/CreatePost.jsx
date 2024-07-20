@@ -98,9 +98,16 @@ const CreatePost = () => {
           >
             <option value="uncategorized">Select a category</option>
             <option value="javascript">JavaScript</option>
-            <option value="reactjs">React.js</option>
-            <option value="nodejs">Node.js</option>
-            <option value="next">Next.js</option>
+            <option value="javascript">Python</option>
+            <option value="reactjs">ReactJs</option>
+            <option value="nextjs">NextJs</option>
+            <option value="programming-languages">Programming Languages</option>
+            <option value="web-frameworks">Web Frameworks</option>
+            <option value="frontend-libraries">Frontend Libraries</option>
+            <option value="backend-frameworks">Backend Frameworks</option>
+            <option value="database">Database</option>
+            <option value="api-frameworks">API Frameworks</option>
+            <option value="data-science">Data Science</option>
           </Select>
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">

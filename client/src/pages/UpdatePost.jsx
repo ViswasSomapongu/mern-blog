@@ -145,6 +145,7 @@ export default function UpdatePost() {
             <option value="backend-frameworks">Backend Frameworks</option>
             <option value="database">Database</option>
             <option value="api-frameworks">API Frameworks</option>
+            <option value="data-science">Data Science</option>
           </Select>
         </div>
         <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">

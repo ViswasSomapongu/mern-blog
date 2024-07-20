@@ -42,7 +42,7 @@ body {
 
 .post-content pre {
     background-color: #1e293b;
-    border: 1px solid rgb(61, 69, 83);
+    border: 2px solid rgb(61, 69, 83);
     color: #e8e7e7;
     white-space: pre-wrap;
     white-space-collapse: preserve;
@@ -52,9 +52,34 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Styling for code blocks */
 code, kbd, samp, pre {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
     font-feature-settings: normal;
     font-variation-settings: normal;
     font-size: 1em;
+    position: relative; /* Ensure the button can be positioned absolutely within the code block */
+    padding: 0.5em; /* Add padding to avoid the button overlapping the text */
+}
+
+/* Styling for the copy button */
+.copy-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10; /* Ensure the button is above the code content */
+}
+
+/* Show the copy button on hover */
+code:hover .copy-button,
+kbd:hover .copy-button,
+samp:hover .copy-button,
+pre:hover .copy-button {
+    display: block;
 }
