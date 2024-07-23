@@ -227,6 +227,13 @@ const DashProfile = () => {
         )}
         <TextInput
           type="text"
+          id="name"
+          placeholder="name"
+          defaultValue={currentUser.name}
+          onChange={handleChange}
+        />
+        <TextInput
+          type="text"
           id="username"
           placeholder="username"
           defaultValue={currentUser.username}

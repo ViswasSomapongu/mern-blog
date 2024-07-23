@@ -37,7 +37,7 @@ body {
 }
 
 .dark .post-content a {
-    color: red;
+    color: rgb(10, 159, 218);
 }
 
 .post-content pre {

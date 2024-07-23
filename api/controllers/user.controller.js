@@ -31,6 +31,11 @@ export const updateUser = async (req, res, next) => {
             return next(errorHandler(400, 'Username can only conatains letters and numbers'));
         }
     }
+    if (req.body.name) {
+        if (req.body.username.length < 3 || req.body.username.length > 20) {
+            return next(errorHandler(400, 'Username must be between 3 and 20 characters'));
+        } 
+    }
     try {
         const updatedUser = await User.findByIdAndUpdate(req.params.userId, {
             $set: {
@@ -38,6 +43,7 @@ export const updateUser = async (req, res, next) => {
                 email: req.body.email,
                 profilePicture: req.body.profilePicture,
                 password: req.body.password,
+                name: req.body.name,
             }
         }, { new: true }
         );
