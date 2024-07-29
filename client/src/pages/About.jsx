@@ -1,35 +1,47 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className='min-h-screen flex items-center justify-center'>
-      <div className='max-w-2xl mx-auto p-3 text-center'>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="max-w-2xl mx-auto p-3 text-center">
         <div>
-          <h1 className='text-3xl font font-semibold text-center my-7'>
-            About Viswas's Blog
+          <h1 className="text-3xl font font-semibold text-center my-7">
+            About
           </h1>
-          <div className='text-md text-gray-500 flex flex-col gap-6'>
+          <div className="text-md text-gray-500 flex flex-col gap-6">
             <p>
-            Welcome to Viswas's Blog! This blog was developed as a personal project to test and showcase my skills in web development.
-            As a passionate developer, I'm constantly exploring new technologies and honing my coding abilities.
+              I'm Viswas, a passionate software engineer from India, currently
+              navigating my final year at CBIT Hyderabad. My expertise lies in
+              Fullstack development, and I’m driven by a relentless curiosity
+              and a desire to continuously improve my skills.
             </p>
-
             <p>
-            Here, you'll discover a collection of articles, tutorials, and projects reflecting my journey in the world of technology.
-            From web development insights to software engineering concepts, this blog serves as a platform to share thoughts, ideas, and experiments with fellow enthusiasts like you.
+              This blog is my personal space to experiment with new technologies
+              and share insights from my journey in the tech world.
             </p>
-
             <p>
-              We encourage you to leave comments on our posts and engage with
-              other readers. You can like other people's comments and reply to
-              them as well. We believe that a community of learners can help
-              each other grow and improve.
+              Your feedback, comments, and interactions are highly encouraged as
+              they help us grow and learn together.
             </p>
+            <p>
+              Thank you for visiting, and I hope you find something inspiring
+              and informative here!
+            </p>
+            <p>
+              Read more <Link
+              to="/search"
+              className="text-xs sm:text-sm text-teal-500 font-bold hover:underline"
+            >
+              About me
+            </Link>
+            </p>
+            
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

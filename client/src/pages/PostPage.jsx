@@ -124,10 +124,16 @@ const PostPage = () => {
               <div className="flex flex-row gap-2 pt-10">
                 <Avatar alt="Admin" img={currentUser.profilePicture} rounded />
                 <div>
-                  <span className="block text-sm mt-2">{currentUser.name ? currentUser.name:"Admin"}</span>
+                  <span className="block text-sm mt-2">
+                    {currentUser.name ? currentUser.name : "Admin"}
+                  </span>
 
-                  <Link className="pointer text-blue-400" target='_blank'
-                  rel='noopener noreferrer' to='https://www.linkedin.com/in/viswas-somapongu/'>
+                  <Link
+                    className="pointer text-blue-400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    to="https://www.linkedin.com/in/viswas-somapongu/"
+                  >
                     Linkedin
                   </Link>
                 </div>
@@ -182,9 +188,9 @@ const PostPage = () => {
           {recentPosts && (
             <div className="mb-6">
               <h3 className="text-lg  font-semibold">Recent Article</h3>
-              <Link to={`/post/${recentPosts[recentPosts.length - 1].slug}`}>
+              <Link to={`/post/${recentPosts[0].slug}`}>
                 <h4 className="text-blue-400 hover:underline">
-                  {recentPosts[recentPosts.length - 1].title}
+                  {recentPosts[0].title}
                 </h4>
               </Link>
             </div>
@@ -241,7 +247,14 @@ const PostPage = () => {
           className="mt-5 p-3 border-4 max-h-[600px] w-full object-cover"
         />
         <div className="flex justify-between p-3 border-b border-slate-500 mx-auto w-full max-w-5xl text-xs">
-          <span>{post && new Date(post.createdAt).toLocaleDateString()}</span>
+          <span>
+            {post &&
+              new Date(post.createdAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+          </span>
           <span className="italic">
             {post && (post.content.length / 1000).toFixed(0)} mins read
           </span>
@@ -300,9 +313,9 @@ const PostPage = () => {
           className="p-3 max-w-5xl mx-auto w-full post-content"
           dangerouslySetInnerHTML={{ __html: post && post.content }}
         ></div>
-        <div className="max-w-4xl mx-auto w-full">
+        {/* <div className="max-w-4xl mx-auto w-full">
           <CallToAction />
-        </div>
+        </div> */}
         <CommentSection postId={post._id} />
         <div className="flex flex-col justify-center items-center mb-5">
           <h1 className="text-xl mt-5">Recent articles</h1>
