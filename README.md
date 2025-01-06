@@ -3,10 +3,9 @@
 Welcome to the Full Stack MERN Blog Project! 😃 In this project, I've crafted a powerful and fully responsive MERN stack web application with cutting-edge features. Dive into our project and explore its capabilities!
 
 ## Features Highlights
-## Features Highlights
 
 - 🔒 **Secure Authentication:** Implemented robust authentication mechanisms for both the client and backend, ensuring the security of user data.
-- 🖥️ **Responsive Design:** This application is meticulously designed to provide a seamless user experience across various devices, ensuring responsiveness is at the core of our design philosophy. We've utilized Tailwind CSS and Flowbite for styling to achieve consistent and modern UI elements.
+- 🖥️ **Responsive Design:** This application is meticulously designed to provide a seamless user experience across various devices, ensuring responsiveness is at the core of our design philosophy. I've utilized Tailwind CSS and Flowbite for styling to achieve consistent and modern UI elements.
 - 🌓 **Dark Mode:** Enhance your user experience with a sleek dark mode option, catering to different preferences and environments.
 - 🔍 **Advanced Search Functionality:** Utilize our advanced search capabilities, allowing users to search by title, limit results, and sort through a modern sidebar, all powered by MongoDB.
 - 💬 **Interactive Community:** Foster an interactive community where users can engage with content, leave comments, and participate in discussions.
@@ -23,7 +22,7 @@ Here's an overview of the project structure:
 
 As an administrator, you'll have access to a range of powerful features:
 
-- **User Management:** Add, edit, and remove user accounts.
+- **User Management:** Remove user accounts.
 - **Post Management:** Control the creation, editing, and deletion of blog posts, ensuring content remains relevant and up-to-date.
 - **Comment Management:** Monitor user comments, approve or reject comments, and maintain a healthy and engaging comment section.
 
